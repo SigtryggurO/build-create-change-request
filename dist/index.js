@@ -9693,12 +9693,12 @@ try {
         // return '';
     }
 
-    console.log("context", github);
-    console.log("context", github.context);
-    console.log("payload", github.context.payload);
-    console.log("pull-request", github.context.payload.pull_request);
-    console.log("pull-request_body", github.context.payload.pull_request.body);
-    console.log("pull-request_url", github.context.payload.pull_request.html_url);
+    console.log("!GITHUB!", github);
+    console.log("!CONTEXT!", github.context);
+    // console.log("payload", github.context.payload);
+    // console.log("pull-request", github.context.payload.pull_request);
+    // console.log("pull-request_body", github.context.payload.pull_request.body);
+    // console.log("pull-request_url", github.context.payload.pull_request.html_url);
 
     // core.setOutput('suffix', suffix);
 }

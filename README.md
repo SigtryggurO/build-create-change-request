@@ -7,7 +7,7 @@ Change Request test
 
 ```yaml
 id: create-change-request
-uses: SigtryggurO/build-create-change-request@v0.1
+uses: SigtryggurO/build-create-change-request@v0.2
 ```
 
 ## How to build action
