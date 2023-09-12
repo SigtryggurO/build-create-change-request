@@ -3,24 +3,18 @@ const github = require('@actions/github');
 
 try {
     if (github.context.eventName === 'pull_request') {
-        github.context.payload.pull_request.body;
-        console.log('Skipping on pull requests, suffix not set')
-        return '';
+        console.log('This is a pull request');
+        // return '';
     }
 
-    github.context
-    const fullBranchName = github.context.payload.ref;
-    const branchName = fullBranchName.replace('refs/heads/', '');
+    console.log("context", github);
+    console.log("context", github.context);
+    console.log("payload", github.context.payload);
+    console.log("pull-request", github.context.payload.pull_request);
+    console.log("pull-request_body", github.context.payload.pull_request.body);
+    console.log("pull-request_url", github.context.payload.pull_request.html_url);
 
-    let suffix = '';
-    if (fullBranchName !== 'refs/heads/master' && fullBranchName !== 'refs/hea<ds/main') {
-        console.log(`Not main branch, set variable 'suffix' as ${suffix}`)
-    }
-    else {
-        console.log(`Running on ${branchName} branch, no suffix created`)
-    }
-
-    core.setOutput('suffix', suffix);
+    // core.setOutput('suffix', suffix);
 }
 catch (error) {
     core.setFailed(error.message);
