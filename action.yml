@@ -1,0 +1,5 @@
+name: 'Create Change Request'
+description: 'Creates a Change Request in Service Now'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
